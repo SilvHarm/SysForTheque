@@ -30,7 +30,6 @@ public class UserBorrowedBook {
 	 */
 	public UserBorrowedBook(int userId, int libraryBookId, Date beginning, Date end, boolean extended, boolean returned,
 			Date dateReturned) {
-		super();
 		this.userId = userId;
 		this.libraryBookId = libraryBookId;
 		this.beginning = beginning;
