@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>fr.silvharm</groupId>
+		<artifactId>SysForTheque</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>SysForTheque-batch</artifactId>
+	<packaging>pom</packaging>
+
+	<name>SysForTheque-batch</name>
+
+
+	<modules>
+		<module>SysForTheque-batch-batch</module>
+		<module>SysForTheque-batch-business</module>
+	</modules>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Modules -->
+			<dependency>
+				<groupId>fr.silvharm</groupId>
+				<artifactId>SysForTheque-batch-batch</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>fr.silvharm</groupId>
+				<artifactId>SysForTheque-batch-business</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>
