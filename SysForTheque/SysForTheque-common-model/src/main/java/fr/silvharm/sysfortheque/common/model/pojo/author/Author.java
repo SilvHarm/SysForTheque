@@ -11,8 +11,6 @@ public class Author {
 	private Date birthDate;
 	private Date deathDate;
 	
-	private Nationality nationality;
-	
 	
 	public Author() {}
 	
@@ -27,13 +25,12 @@ public class Author {
 	 * @param deathDate
 	 * @param nationality
 	 */
-	public Author(String pseudo, String surname, String firstName, Date birthDate, Date deathDate, Nationality nationality) {
+	public Author(String pseudo, String surname, String firstName, Date birthDate, Date deathDate) {
 		this.pseudo = pseudo;
 		this.surname = surname;
 		this.firstName = firstName;
 		this.birthDate = birthDate;
 		this.deathDate = deathDate;
-		this.nationality = nationality;
 	}
 	
 	
@@ -140,23 +137,6 @@ public class Author {
 	 */
 	public void setDeathDate(Date deathDate) {
 		this.deathDate = deathDate;
-	}
-	
-	
-	/**
-	 * @return the nationality
-	 */
-	public Nationality getNationality() {
-		return nationality;
-	}
-	
-	
-	/**
-	 * @param nationality
-	 *           the nationality to set
-	 */
-	public void setNationality(Nationality nationality) {
-		this.nationality = nationality;
 	}
 	
 }
