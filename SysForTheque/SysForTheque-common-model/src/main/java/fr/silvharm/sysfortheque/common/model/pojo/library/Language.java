@@ -4,9 +4,8 @@ package fr.silvharm.sysfortheque.common.model.pojo.library;
 public class Language {
 	
 	private Integer id;
-	private String reference;
-	private int bookId;
-	private int languageId;
+	private String language;
+	private String code;
 	
 	
 	public Language() {}
@@ -15,14 +14,12 @@ public class Language {
 	/**
 	 * Used when a new Language need to be added to the database
 	 * 
-	 * @param reference
-	 * @param bookId
-	 * @param languageId
+	 * @param language
+	 * @param code
 	 */
-	public Language(String reference, int bookId, int languageId) {
-		this.reference = reference;
-		this.bookId = bookId;
-		this.languageId = languageId;
+	public Language(String language, String code) {
+		this.language = language;
+		this.code = code;
 	}
 	
 	
@@ -48,53 +45,36 @@ public class Language {
 	
 	
 	/**
-	 * @return the reference
+	 * @return the language
 	 */
-	public String getReference() {
-		return reference;
+	public String getLanguage() {
+		return language;
 	}
 	
 	
 	/**
-	 * @param reference
-	 *           the reference to set
+	 * @param language
+	 *           the language to set
 	 */
-	public void setReference(String reference) {
-		this.reference = reference;
+	public void setLanguage(String language) {
+		this.language = language;
 	}
 	
 	
 	/**
-	 * @return the bookId
+	 * @return the code
 	 */
-	public int getBookId() {
-		return bookId;
+	public String getCode() {
+		return code;
 	}
 	
 	
 	/**
-	 * @param bookId
-	 *           the bookId to set
+	 * @param code
+	 *           the code to set
 	 */
-	public void setBookId(int bookId) {
-		this.bookId = bookId;
-	}
-	
-	
-	/**
-	 * @return the languageId
-	 */
-	public int getLanguageId() {
-		return languageId;
-	}
-	
-	
-	/**
-	 * @param languageId
-	 *           the languageId to set
-	 */
-	public void setLanguageId(int languageId) {
-		this.languageId = languageId;
+	public void setCode(String code) {
+		this.code = code;
 	}
 	
 }
