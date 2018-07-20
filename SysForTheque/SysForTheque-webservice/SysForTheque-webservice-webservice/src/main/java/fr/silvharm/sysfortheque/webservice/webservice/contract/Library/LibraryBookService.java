@@ -23,7 +23,7 @@ public interface LibraryBookService {
 	
 	
 	/**
-	 * Obtain all the BookBean whom the id where contained in the List passed in parameter
+	 * Obtain all the BookBean whom the id where contained in (bookIdList)
 	 * 
 	 * @param bookIdList
 	 *           a List containing all the id of the BookBean requested
@@ -34,7 +34,7 @@ public interface LibraryBookService {
 	
 	
 	/**
-	 * Obtain all the Book who possess all the Genre passed in parameter
+	 * Obtain all the Book who possess all the Genre contained in (bookGenresList)
 	 * 
 	 * @param bookGenresList
 	 *           a List containing all the Genre that the Book returned shall have
@@ -45,7 +45,7 @@ public interface LibraryBookService {
 	
 	
 	/**
-	 * Obtain all the Book whom the title match the one passed in parameter
+	 * Obtain all the Book whom the title match (title)
 	 * 
 	 * @param title
 	 *           a part of the title of the Book sought-after
