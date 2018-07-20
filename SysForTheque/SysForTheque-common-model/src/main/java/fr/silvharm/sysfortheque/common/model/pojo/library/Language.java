@@ -12,8 +12,6 @@ public class Language {
 	
 	
 	/**
-	 * Used when a new Language need to be added to the database
-	 * 
 	 * @param language
 	 * @param code
 	 */

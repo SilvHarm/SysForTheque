@@ -16,8 +16,6 @@ public class Author {
 	
 	
 	/**
-	 * Used when a new Author need to be added to the database
-	 * 
 	 * @param pseudo
 	 * @param surname
 	 * @param firstName

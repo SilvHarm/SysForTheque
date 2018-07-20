@@ -13,8 +13,6 @@ public class LibraryBook {
 	
 	
 	/**
-	 * Used when a new LibraryBook need to be added to the database
-	 * 
 	 * @param reference
 	 * @param bookId
 	 * @param languageId

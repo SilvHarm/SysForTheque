@@ -11,8 +11,6 @@ public class Role {
 	
 	
 	/**
-	 * Used when a new Role need to be added to the database
-	 * 
 	 * @param role
 	 */
 	public Role(String role) {

@@ -11,8 +11,6 @@ public class FormatType {
 	
 	
 	/**
-	 * Used when a new FormatType need to be added to the database
-	 * 
 	 * @param format
 	 */
 	public FormatType(String format) {

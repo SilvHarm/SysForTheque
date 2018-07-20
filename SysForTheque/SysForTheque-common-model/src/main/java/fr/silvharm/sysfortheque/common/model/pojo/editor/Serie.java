@@ -12,8 +12,6 @@ public class Serie {
 	
 	
 	/**
-	 * Used when a new Serie need to be added to the database
-	 * 
 	 * @param name
 	 * @param editorId
 	 */

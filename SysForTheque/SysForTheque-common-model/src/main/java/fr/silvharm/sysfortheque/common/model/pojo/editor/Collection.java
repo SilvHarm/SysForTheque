@@ -12,8 +12,6 @@ public class Collection {
 	
 	
 	/**
-	 * Used when a new Collection need to be added to the database
-	 * 
 	 * @param name
 	 * @param editorId
 	 */

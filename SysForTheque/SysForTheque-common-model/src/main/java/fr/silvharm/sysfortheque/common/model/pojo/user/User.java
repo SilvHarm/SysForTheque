@@ -13,8 +13,6 @@ public class User {
 	
 	
 	/**
-	 * Used when a new User need to be added to the database
-	 * 
 	 * @param username
 	 * @param password
 	 * @param emailAddress

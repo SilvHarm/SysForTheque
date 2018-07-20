@@ -11,8 +11,6 @@ public class Editor {
 	
 	
 	/**
-	 * Used when a new Editor need to be added to the database
-	 * 
 	 * @param name
 	 */
 	public Editor(String name) {

@@ -23,8 +23,6 @@ public class Book {
 	
 	
 	/**
-	 * Used when a new Book need to be added to the database
-	 * 
 	 * @param title
 	 * @param editorId
 	 * @param collectionId

@@ -12,8 +12,6 @@ public class Nationality {
 	
 	
 	/**
-	 * Used when a new Nationality need to be added to the database
-	 * 
 	 * @param nationality
 	 * @param country
 	 * @param isoCode

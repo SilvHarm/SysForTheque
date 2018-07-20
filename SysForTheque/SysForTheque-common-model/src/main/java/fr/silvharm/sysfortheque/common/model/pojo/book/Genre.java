@@ -11,8 +11,6 @@ public class Genre {
 	
 	
 	/**
-	 * Used when a new Genre need to be added to the database
-	 * 
 	 * @param genre
 	 */
 	public Genre(String genre) {

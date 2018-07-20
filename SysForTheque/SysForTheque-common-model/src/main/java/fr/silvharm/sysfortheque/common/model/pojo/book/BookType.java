@@ -11,8 +11,6 @@ public class BookType {
 	
 	
 	/**
-	 * Used when a new BookType need to be added to the database
-	 * 
 	 * @param bookType
 	 */
 	public BookType(String bookType) {
