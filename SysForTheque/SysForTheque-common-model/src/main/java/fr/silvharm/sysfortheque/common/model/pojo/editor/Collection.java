@@ -3,9 +3,9 @@ package fr.silvharm.sysfortheque.common.model.pojo.editor;
 
 public class Collection {
 	
-	private Integer id;
-	private String name;
-	private int editorId;
+	protected Integer id;
+	protected String name;
+	protected int editorId;
 	
 	
 	public Collection() {}

@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class Author {
 	
-	private Integer id;
-	private String pseudo;
-	private String surname;
-	private String firstName;
-	private Date birthDate;
-	private Date deathDate;
+	protected Integer id;
+	protected String pseudo;
+	protected String surname;
+	protected String firstName;
+	protected Date birthDate;
+	protected Date deathDate;
 	
 	
 	public Author() {}
@@ -23,7 +23,6 @@ public class Author {
 	 * @param firstName
 	 * @param birthDate
 	 * @param deathDate
-	 * @param nationality
 	 */
 	public Author(String pseudo, String surname, String firstName, Date birthDate, Date deathDate) {
 		this.pseudo = pseudo;

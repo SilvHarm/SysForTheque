@@ -4,19 +4,19 @@ import java.util.Date;
 
 public class Book {
 	
-	private Integer id;
-	private String title;
-	private Integer editorId;
-	private Integer collectionId;
-	private Integer serieId;
-	private Integer serieNumber;
-	private Date releaseDate;
-	private Integer formatTypeId;
-	private Integer pageCount;
-	private Integer bookTypeId;
-	private String isbn;
-	private String description;
-	private String covertFileName;
+	protected Integer id;
+	protected String title;
+	protected Integer editorId;
+	protected Integer collectionId;
+	protected Integer serieId;
+	protected Integer serieNumber;
+	protected Date releaseDate;
+	protected Integer formatTypeId;
+	protected Integer pageCount;
+	protected Integer bookTypeId;
+	protected String isbn;
+	protected String description;
+	protected String covertFileName;
 	
 	
 	public Book() {}

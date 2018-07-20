@@ -3,8 +3,8 @@ package fr.silvharm.sysfortheque.common.model.pojo.author;
 
 public class Role {
 	
-	private Integer id;
-	private String role;
+	protected Integer id;
+	protected String role;
 	
 	
 	public Role() {}

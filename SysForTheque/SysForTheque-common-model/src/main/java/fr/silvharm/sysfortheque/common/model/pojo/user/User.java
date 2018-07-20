@@ -3,10 +3,10 @@ package fr.silvharm.sysfortheque.common.model.pojo.user;
 
 public class User {
 	
-	private Integer id;
-	private String username;
-	private String password;
-	private String emailAddress;
+	protected Integer id;
+	protected String username;
+	protected String password;
+	protected String emailAddress;
 	
 	
 	public User() {}

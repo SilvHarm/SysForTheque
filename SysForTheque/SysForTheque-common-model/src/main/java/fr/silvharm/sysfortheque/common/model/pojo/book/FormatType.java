@@ -3,8 +3,8 @@ package fr.silvharm.sysfortheque.common.model.pojo.book;
 
 public class FormatType {
 	
-	private Integer id;
-	private String format;
+	protected Integer id;
+	protected String format;
 	
 	
 	public FormatType() {}

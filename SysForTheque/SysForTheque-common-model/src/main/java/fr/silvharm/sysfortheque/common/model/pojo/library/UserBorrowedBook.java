@@ -4,14 +4,14 @@ import java.util.Date;
 
 public class UserBorrowedBook {
 	
-	private Integer id;
-	private int userId;
-	private int libraryBookId;
-	private Date beginning;
-	private Date end;
-	private boolean extended;
-	private boolean returned;
-	private Date dateReturned;
+	protected Integer id;
+	protected int userId;
+	protected int libraryBookId;
+	protected Date beginning;
+	protected Date end;
+	protected boolean extended;
+	protected boolean returned;
+	protected Date dateReturned;
 	
 	
 	public UserBorrowedBook() {}

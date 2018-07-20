@@ -5,8 +5,8 @@ import fr.silvharm.sysfortheque.common.model.pojo.author.Role;
 
 public class AuthorRoleBean {
 	
-	private Author author;
-	private Role role;
+	protected Author author;
+	protected Role role;
 	
 	
 	/**
@@ -14,7 +14,6 @@ public class AuthorRoleBean {
 	 * @param role
 	 */
 	public AuthorRoleBean(Author author, Role role) {
-		super();
 		this.author = author;
 		this.role = role;
 	}

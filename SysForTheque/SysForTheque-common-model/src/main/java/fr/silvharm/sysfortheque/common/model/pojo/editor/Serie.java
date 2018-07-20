@@ -3,9 +3,9 @@ package fr.silvharm.sysfortheque.common.model.pojo.editor;
 
 public class Serie {
 	
-	private Integer id;
-	private String name;
-	private int editorId;
+	protected Integer id;
+	protected String name;
+	protected int editorId;
 	
 	
 	public Serie() {}

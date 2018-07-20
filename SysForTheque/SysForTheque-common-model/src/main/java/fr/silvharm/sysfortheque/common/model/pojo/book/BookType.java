@@ -3,8 +3,8 @@ package fr.silvharm.sysfortheque.common.model.pojo.book;
 
 public class BookType {
 	
-	private Integer id;
-	private String bookType;
+	protected Integer id;
+	protected String bookType;
 	
 	
 	public BookType() {}

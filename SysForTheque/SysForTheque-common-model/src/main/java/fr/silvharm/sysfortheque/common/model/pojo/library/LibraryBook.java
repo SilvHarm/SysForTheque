@@ -3,10 +3,10 @@ package fr.silvharm.sysfortheque.common.model.pojo.library;
 
 public class LibraryBook {
 	
-	private Integer id;
-	private String reference;
-	private int bookId;
-	private int languageId;
+	protected Integer id;
+	protected String reference;
+	protected int bookId;
+	protected int languageId;
 	
 	
 	public LibraryBook() {}

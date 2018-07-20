@@ -3,8 +3,8 @@ package fr.silvharm.sysfortheque.common.model.pojo.book;
 
 public class Genre {
 	
-	private Integer id;
-	private String genre;
+	protected Integer id;
+	protected String genre;
 	
 	
 	public Genre() {}

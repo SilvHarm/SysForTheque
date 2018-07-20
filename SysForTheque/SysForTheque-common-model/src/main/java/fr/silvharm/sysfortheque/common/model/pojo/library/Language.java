@@ -3,9 +3,9 @@ package fr.silvharm.sysfortheque.common.model.pojo.library;
 
 public class Language {
 	
-	private Integer id;
-	private String language;
-	private String code;
+	protected Integer id;
+	protected String language;
+	protected String code;
 	
 	
 	public Language() {}

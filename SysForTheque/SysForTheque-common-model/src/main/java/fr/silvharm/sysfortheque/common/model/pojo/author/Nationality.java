@@ -2,10 +2,10 @@ package fr.silvharm.sysfortheque.common.model.pojo.author;
 
 public class Nationality {
 	
-	private Integer id;
-	private String nationality;
-	private String country;
-	private String isoCode;
+	protected Integer id;
+	protected String nationality;
+	protected String country;
+	protected String isoCode;
 	
 	
 	public Nationality() {}

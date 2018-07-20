@@ -3,8 +3,8 @@ package fr.silvharm.sysfortheque.common.model.pojo.editor;
 
 public class Editor {
 	
-	private Integer id;
-	private String name;
+	protected Integer id;
+	protected String name;
 	
 	
 	public Editor() {}
