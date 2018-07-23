@@ -32,6 +32,40 @@ public class Author {
 	
 	
 	/********************************
+	 * Methods
+	 *******************************/
+	
+	/**
+	 * Copy the attributes from the Author (author) into the one calling the method
+	 * 
+	 * @param author
+	 *           the Author whom we want to copy the attributes
+	 */
+	public void copyFromAuthor(Author author) {
+		this.id = author.getId();
+		this.pseudo = author.getPseudo();
+		this.surname = author.getSurname();
+		this.firstName = author.getFirstName();
+		this.birthDate = author.getBirthDate();
+		this.deathDate = author.getDeathDate();
+	}
+	
+	
+	/**
+	 * Copy the attributes from the Author (author) into a new one
+	 * 
+	 * @param author
+	 *           the Author whom we want to copy the attributes
+	 * @return a new Author with the attributes of (author)
+	 */
+	public static Author copyIntoAuthor(Author author) {
+		Author toReturn = new Author();
+		toReturn.copyFromAuthor(author);
+		return toReturn;
+	}
+	
+	
+	/********************************
 	 * Getters & Setters
 	 *******************************/
 	

@@ -55,6 +55,47 @@ public class Book {
 	
 	
 	/********************************
+	 * Methods
+	 *******************************/
+	
+	/**
+	 * Copy the attributes from the Book (book) into the one calling the method
+	 * 
+	 * @param book
+	 *           the Book whom we want to copy the attributes
+	 */
+	public void copyFromBook(Book book) {
+		this.id = book.getId();
+		this.title = book.getTitle();
+		this.editorId = book.getEditorId();
+		this.collectionId = book.getCollectionId();
+		this.serieId = book.getSerieId();
+		this.serieNumber = book.getSerieNumber();
+		this.releaseDate = book.getReleaseDate();
+		this.formatTypeId = book.getFormatTypeId();
+		this.pageCount = book.getPageCount();
+		this.bookTypeId = book.getBookTypeId();
+		this.isbn = book.getIsbn();
+		this.description = book.getDescription();
+		this.covertFileName = book.getCovertFileName();
+	}
+	
+	
+	/**
+	 * Copy the attributes from the Book (book) into a new one
+	 * 
+	 * @param book
+	 *           the Book whom we want to copy the attributes
+	 * @return a new Book with the attributes of (book)
+	 */
+	public static Book copyIntoBook(Book book) {
+		Book toReturn = new Book();
+		toReturn.copyFromBook(book);
+		return toReturn;
+	}
+	
+	
+	/********************************
 	 * Getters & Setters
 	 *******************************/
 	

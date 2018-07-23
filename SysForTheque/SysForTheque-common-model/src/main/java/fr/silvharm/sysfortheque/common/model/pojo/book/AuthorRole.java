@@ -1,6 +1,5 @@
 package fr.silvharm.sysfortheque.common.model.pojo.book;
 
-
 public class AuthorRole {
 	
 	protected Integer bookId;
@@ -20,6 +19,37 @@ public class AuthorRole {
 		this.bookId = bookId;
 		this.authorId = authorId;
 		this.roleId = roleId;
+	}
+	
+	
+	/********************************
+	 * Methods
+	 *******************************/
+	
+	/**
+	 * Copy the attributes from the AuthorRole (authorRole) into the one calling the method
+	 * 
+	 * @param authorRole
+	 *           the AuthorRole whom we want to copy the attributes
+	 */
+	public void copyFromAuthorRole(AuthorRole authorRole) {
+		this.bookId = authorRole.getBookId();
+		this.authorId = authorRole.getAuthorId();
+		this.roleId = authorRole.getRoleId();
+	}
+	
+	
+	/**
+	 * Copy the attributes from the AuthorRole (authorRole) into a new one
+	 * 
+	 * @param authorRole
+	 *           the AuthorRole whom we want to copy the attributes
+	 * @return a new AuthorRole with the attributes of (authorRole)
+	 */
+	public static AuthorRole copyIntoAuthorRole(AuthorRole authorRole) {
+		AuthorRole toReturn = new AuthorRole();
+		toReturn.copyFromAuthorRole(authorRole);
+		return toReturn;
 	}
 	
 	
