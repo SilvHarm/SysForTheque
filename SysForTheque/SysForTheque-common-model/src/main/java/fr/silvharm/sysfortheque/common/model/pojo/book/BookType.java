@@ -3,19 +3,27 @@ package fr.silvharm.sysfortheque.common.model.pojo.book;
 
 public class BookType {
 	
-	private Integer id;
-	private String bookType;
+	protected Integer id;
+	protected String bookType;
 	
 	
 	public BookType() {}
 	
 	
 	/**
-	 * Used when a new BookType need to be added to the database
-	 * 
 	 * @param bookType
 	 */
 	public BookType(String bookType) {
+		this.bookType = bookType;
+	}
+	
+	
+	/**
+	 * @param id
+	 * @param bookType
+	 */
+	public BookType(Integer id, String bookType) {
+		this.id = id;
 		this.bookType = bookType;
 	}
 	

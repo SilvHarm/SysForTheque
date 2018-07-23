@@ -3,19 +3,27 @@ package fr.silvharm.sysfortheque.common.model.pojo.editor;
 
 public class Editor {
 	
-	private Integer id;
-	private String name;
+	protected Integer id;
+	protected String name;
 	
 	
 	public Editor() {}
 	
 	
 	/**
-	 * Used when a new Editor need to be added to the database
-	 * 
 	 * @param name
 	 */
 	public Editor(String name) {
+		this.name = name;
+	}
+	
+	
+	/**
+	 * @param id
+	 * @param name
+	 */
+	public Editor(Integer id, String name) {
+		this.id = id;
 		this.name = name;
 	}
 	

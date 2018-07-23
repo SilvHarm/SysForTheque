@@ -1,20 +1,41 @@
-package fr.silvharm.sysfortheque.common.model.bean.author;
+package fr.silvharm.sysfortheque.common.model.bean.book;
 
 import fr.silvharm.sysfortheque.common.model.pojo.author.Author;
 import fr.silvharm.sysfortheque.common.model.pojo.author.Role;
+import fr.silvharm.sysfortheque.common.model.pojo.book.AuthorRole;
 
-public class AuthorRoleBean {
+public class AuthorRoleBean extends AuthorRole {
 	
-	private Author author;
-	private Role role;
+	protected Author author;
+	protected Role role;
+	
+	
+	public AuthorRoleBean() {
+		super();
+	}
 	
 	
 	/**
+	 * @param authorRole
 	 * @param author
 	 * @param role
 	 */
-	public AuthorRoleBean(Author author, Role role) {
-		super();
+	public AuthorRoleBean(AuthorRole authorRole, Author author, Role role) {
+		this.copyFromAuthorRole(authorRole);
+		this.author = author;
+		this.role = role;
+	}
+	
+	
+	/**
+	 * @param bookId
+	 * @param authorId
+	 * @param roleId
+	 * @param author
+	 * @param role
+	 */
+	public AuthorRoleBean(Integer bookId, Integer authorId, Integer roleId, Author author, Role role) {
+		super(bookId, authorId, roleId);
 		this.author = author;
 		this.role = role;
 	}

@@ -1,30 +1,37 @@
 package fr.silvharm.sysfortheque.common.model.bean.library;
 
 import fr.silvharm.sysfortheque.common.model.bean.book.BookBean;
-import fr.silvharm.sysfortheque.common.model.pojo.library.Language;
+import fr.silvharm.sysfortheque.common.model.pojo.library.LibraryBook;
 
-public class LibraryBookBean {
+public class LibraryBookBean extends LibraryBook {
 	
-	private Integer id;
-	private String reference;
-	private BookBean book;
-	private Language language;
+	protected BookBean bookBean;
 	
 	
-	public LibraryBookBean() {}
+	public LibraryBookBean() {
+		super();
+	}
+	
+	
+	/**
+	 * @param libraryBook
+	 * @param bookBean
+	 */
+	public LibraryBookBean(LibraryBook libraryBook, BookBean bookBean) {
+		this.copyFromLibraryBook(libraryBook);
+		this.bookBean = bookBean;
+	}
 	
 	
 	/**
 	 * @param id
 	 * @param reference
-	 * @param book
-	 * @param language
+	 * @param bookId
+	 * @param bookBean
 	 */
-	public LibraryBookBean(Integer id, String reference, BookBean book, Language language) {
-		this.id = id;
-		this.reference = reference;
-		this.book = book;
-		this.language = language;
+	public LibraryBookBean(Integer id, String reference, int bookId, int languageId, BookBean bookBean) {
+		super(id, reference, bookId);
+		this.bookBean = bookBean;
 	}
 	
 	
@@ -33,70 +40,19 @@ public class LibraryBookBean {
 	 *******************************/
 	
 	/**
-	 * @return the id
-	 */
-	public Integer getId() {
-		return id;
-	}
-	
-	
-	/**
-	 * @param id
-	 *           the id to set
-	 */
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
-	
-	/**
-	 * @return the reference
-	 */
-	public String getReference() {
-		return reference;
-	}
-	
-	
-	/**
-	 * @param reference
-	 *           the reference to set
-	 */
-	public void setReference(String reference) {
-		this.reference = reference;
-	}
-	
-	
-	/**
-	 * @return the book
+	 * @return the bookBean
 	 */
 	public BookBean getBook() {
-		return book;
+		return bookBean;
 	}
 	
 	
 	/**
-	 * @param book
-	 *           the book to set
+	 * @param bookBean
+	 *           the bookBean to set
 	 */
-	public void setBook(BookBean book) {
-		this.book = book;
-	}
-	
-	
-	/**
-	 * @return the language
-	 */
-	public Language getLanguage() {
-		return language;
-	}
-	
-	
-	/**
-	 * @param language
-	 *           the language to set
-	 */
-	public void setLanguage(Language language) {
-		this.language = language;
+	public void setBookBean(BookBean bookBean) {
+		this.bookBean = bookBean;
 	}
 	
 }

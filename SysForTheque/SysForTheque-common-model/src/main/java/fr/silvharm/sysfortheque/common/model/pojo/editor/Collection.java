@@ -3,21 +3,31 @@ package fr.silvharm.sysfortheque.common.model.pojo.editor;
 
 public class Collection {
 	
-	private Integer id;
-	private String name;
-	private int editorId;
+	protected Integer id;
+	protected String name;
+	protected int editorId;
 	
 	
 	public Collection() {}
 	
 	
 	/**
-	 * Used when a new Collection need to be added to the database
-	 * 
 	 * @param name
 	 * @param editorId
 	 */
 	public Collection(String name, int editorId) {
+		this.name = name;
+		this.editorId = editorId;
+	}
+	
+	
+	/**
+	 * @param id
+	 * @param name
+	 * @param editorId
+	 */
+	public Collection(Integer id, String name, int editorId) {
+		this.id = id;
 		this.name = name;
 		this.editorId = editorId;
 	}
