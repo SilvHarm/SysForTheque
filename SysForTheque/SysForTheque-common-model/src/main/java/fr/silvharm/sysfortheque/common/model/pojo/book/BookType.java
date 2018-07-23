@@ -18,6 +18,16 @@ public class BookType {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param bookType
+	 */
+	public BookType(Integer id, String bookType) {
+		this.id = id;
+		this.bookType = bookType;
+	}
+	
+	
 	/********************************
 	 * Getters & Setters
 	 *******************************/

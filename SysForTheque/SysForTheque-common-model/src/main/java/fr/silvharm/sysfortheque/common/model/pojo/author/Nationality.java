@@ -23,6 +23,20 @@ public class Nationality {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param nationality
+	 * @param country
+	 * @param isoCode
+	 */
+	public Nationality(Integer id, String nationality, String country, String isoCode) {
+		this.id = id;
+		this.nationality = nationality;
+		this.country = country;
+		this.isoCode = isoCode;
+	}
+	
+	
 	/********************************
 	 * Getters & Setters
 	 *******************************/

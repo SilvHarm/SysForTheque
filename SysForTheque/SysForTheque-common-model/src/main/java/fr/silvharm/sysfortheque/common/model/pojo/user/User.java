@@ -24,6 +24,20 @@ public class User {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param username
+	 * @param password
+	 * @param emailAddress
+	 */
+	public User(Integer id, String username, String password, String emailAddress) {
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.emailAddress = emailAddress;
+	}
+	
+	
 	/********************************
 	 * Getters & Setters
 	 *******************************/

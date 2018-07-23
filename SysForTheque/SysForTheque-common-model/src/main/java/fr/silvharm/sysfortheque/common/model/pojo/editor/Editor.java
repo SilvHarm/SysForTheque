@@ -18,6 +18,16 @@ public class Editor {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param name
+	 */
+	public Editor(Integer id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	
+	
 	/********************************
 	 * Getters & Setters
 	 *******************************/

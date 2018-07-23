@@ -24,6 +24,20 @@ public class LibraryBook {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param reference
+	 * @param bookId
+	 * @param languageId
+	 */
+	public LibraryBook(Integer id, String reference, int bookId, int languageId) {
+		this.id = id;
+		this.reference = reference;
+		this.bookId = bookId;
+		this.languageId = languageId;
+	}
+	
+	
 	/********************************
 	 * Methods
 	 *******************************/

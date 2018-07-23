@@ -18,6 +18,16 @@ public class Genre {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param genre
+	 */
+	public Genre(Integer id, String genre) {
+		this.id = id;
+		this.genre = genre;
+	}
+	
+	
 	/********************************
 	 * Getters & Setters
 	 *******************************/

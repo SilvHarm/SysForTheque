@@ -21,6 +21,18 @@ public class Serie {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param name
+	 * @param editorId
+	 */
+	public Serie(Integer id, String name, int editorId) {
+		this.id = id;
+		this.name = name;
+		this.editorId = editorId;
+	}
+	
+	
 	/********************************
 	 * Getters & Setters
 	 *******************************/

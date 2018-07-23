@@ -18,6 +18,16 @@ public class Role {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param role
+	 */
+	public Role(Integer id, String role) {
+		this.id = id;
+		this.role = role;
+	}
+	
+	
 	/********************************
 	 * Getters & Setters
 	 *******************************/

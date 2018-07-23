@@ -54,6 +54,40 @@ public class Book {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param title
+	 * @param editorId
+	 * @param collectionId
+	 * @param serieId
+	 * @param serieNumber
+	 * @param releaseDate
+	 * @param formatTypeId
+	 * @param pageCount
+	 * @param bookTypeId
+	 * @param isbn
+	 * @param description
+	 * @param covertFileName
+	 */
+	public Book(Integer id, String title, Integer editorId, Integer collectionId, Integer serieId, Integer serieNumber,
+			Date releaseDate, Integer formatTypeId, Integer pageCount, Integer bookTypeId, String isbn, String description,
+			String covertFileName) {
+		this.id = id;
+		this.title = title;
+		this.editorId = editorId;
+		this.collectionId = collectionId;
+		this.serieId = serieId;
+		this.serieNumber = serieNumber;
+		this.releaseDate = releaseDate;
+		this.formatTypeId = formatTypeId;
+		this.pageCount = pageCount;
+		this.bookTypeId = bookTypeId;
+		this.isbn = isbn;
+		this.description = description;
+		this.covertFileName = covertFileName;
+	}
+	
+	
 	/********************************
 	 * Methods
 	 *******************************/

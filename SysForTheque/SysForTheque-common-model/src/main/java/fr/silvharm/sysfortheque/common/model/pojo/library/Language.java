@@ -21,6 +21,18 @@ public class Language {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param language
+	 * @param code
+	 */
+	public Language(Integer id, String language, String code) {
+		this.id = id;
+		this.language = language;
+		this.code = code;
+	}
+	
+	
 	/********************************
 	 * Getters & Setters
 	 *******************************/

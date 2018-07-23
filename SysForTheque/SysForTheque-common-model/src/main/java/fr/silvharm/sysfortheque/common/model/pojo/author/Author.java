@@ -31,6 +31,24 @@ public class Author {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param pseudo
+	 * @param surname
+	 * @param firstName
+	 * @param birthDate
+	 * @param deathDate
+	 */
+	public Author(Integer id, String pseudo, String surname, String firstName, Date birthDate, Date deathDate) {
+		this.id = id;
+		this.pseudo = pseudo;
+		this.surname = surname;
+		this.firstName = firstName;
+		this.birthDate = birthDate;
+		this.deathDate = deathDate;
+	}
+	
+	
 	/********************************
 	 * Methods
 	 *******************************/

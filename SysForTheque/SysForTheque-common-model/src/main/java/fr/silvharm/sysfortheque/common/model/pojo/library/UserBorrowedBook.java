@@ -38,6 +38,29 @@ public class UserBorrowedBook {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param userId
+	 * @param libraryBookId
+	 * @param beginningDate
+	 * @param endDate
+	 * @param extended
+	 * @param returned
+	 * @param returnedDate
+	 */
+	public UserBorrowedBook(Integer id, int userId, int libraryBookId, Date beginningDate, Date endDate,
+			boolean extended, boolean returned, Date returnedDate) {
+		this.id = id;
+		this.userId = userId;
+		this.libraryBookId = libraryBookId;
+		this.beginningDate = beginningDate;
+		this.endDate = endDate;
+		this.extended = extended;
+		this.returned = returned;
+		this.returnedDate = returnedDate;
+	}
+	
+	
 	/********************************
 	 * Getters & Setters
 	 *******************************/

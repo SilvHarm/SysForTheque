@@ -18,6 +18,16 @@ public class FormatType {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param format
+	 */
+	public FormatType(Integer id, String format) {
+		this.id = id;
+		this.format = format;
+	}
+	
+	
 	/********************************
 	 * Getters & Setters
 	 *******************************/
