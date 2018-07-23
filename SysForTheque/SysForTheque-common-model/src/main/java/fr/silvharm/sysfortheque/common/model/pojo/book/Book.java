@@ -11,6 +11,7 @@ public class Book {
 	protected Integer serieId;
 	protected Integer serieNumber;
 	protected Date releaseDate;
+	protected Integer languageId;
 	protected Integer formatTypeId;
 	protected Integer pageCount;
 	protected Integer bookTypeId;
@@ -29,6 +30,7 @@ public class Book {
 	 * @param serieId
 	 * @param serieNumber
 	 * @param releaseDate
+	 * @param languageId
 	 * @param formatTypeId
 	 * @param pageCount
 	 * @param bookTypeId
@@ -37,14 +39,15 @@ public class Book {
 	 * @param covertFileName
 	 */
 	public Book(String title, Integer editorId, Integer collectionId, Integer serieId, Integer serieNumber,
-			Date releaseDate, Integer formatTypeId, Integer pageCount, Integer bookTypeId, String isbn, String description,
-			String covertFileName) {
+			Date releaseDate, Integer languageId, Integer formatTypeId, Integer pageCount, Integer bookTypeId, String isbn,
+			String description, String covertFileName) {
 		this.title = title;
 		this.editorId = editorId;
 		this.collectionId = collectionId;
 		this.serieId = serieId;
 		this.serieNumber = serieNumber;
 		this.releaseDate = releaseDate;
+		this.languageId = languageId;
 		this.formatTypeId = formatTypeId;
 		this.pageCount = pageCount;
 		this.bookTypeId = bookTypeId;
@@ -62,6 +65,7 @@ public class Book {
 	 * @param serieId
 	 * @param serieNumber
 	 * @param releaseDate
+	 * @param languageId
 	 * @param formatTypeId
 	 * @param pageCount
 	 * @param bookTypeId
@@ -70,8 +74,8 @@ public class Book {
 	 * @param covertFileName
 	 */
 	public Book(Integer id, String title, Integer editorId, Integer collectionId, Integer serieId, Integer serieNumber,
-			Date releaseDate, Integer formatTypeId, Integer pageCount, Integer bookTypeId, String isbn, String description,
-			String covertFileName) {
+			Date releaseDate, Integer languageId, Integer formatTypeId, Integer pageCount, Integer bookTypeId, String isbn,
+			String description, String covertFileName) {
 		this.id = id;
 		this.title = title;
 		this.editorId = editorId;
@@ -79,6 +83,7 @@ public class Book {
 		this.serieId = serieId;
 		this.serieNumber = serieNumber;
 		this.releaseDate = releaseDate;
+		this.languageId = languageId;
 		this.formatTypeId = formatTypeId;
 		this.pageCount = pageCount;
 		this.bookTypeId = bookTypeId;
@@ -106,6 +111,7 @@ public class Book {
 		this.serieId = book.getSerieId();
 		this.serieNumber = book.getSerieNumber();
 		this.releaseDate = book.getReleaseDate();
+		this.languageId = book.getLanguageId();
 		this.formatTypeId = book.getFormatTypeId();
 		this.pageCount = book.getPageCount();
 		this.bookTypeId = book.getBookTypeId();
@@ -249,6 +255,23 @@ public class Book {
 	 */
 	public void setReleaseDate(Date releaseDate) {
 		this.releaseDate = releaseDate;
+	}
+	
+	
+	/**
+	 * @return the languageId
+	 */
+	public Integer getLanguageId() {
+		return languageId;
+	}
+	
+	
+	/**
+	 * @param languageId
+	 *           the languageId to set
+	 */
+	public void setLanguageId(Integer languageId) {
+		this.languageId = languageId;
 	}
 	
 	

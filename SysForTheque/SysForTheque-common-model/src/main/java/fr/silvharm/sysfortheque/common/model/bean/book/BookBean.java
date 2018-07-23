@@ -10,16 +10,18 @@ import fr.silvharm.sysfortheque.common.model.pojo.book.Genre;
 import fr.silvharm.sysfortheque.common.model.pojo.editor.Collection;
 import fr.silvharm.sysfortheque.common.model.pojo.editor.Editor;
 import fr.silvharm.sysfortheque.common.model.pojo.editor.Serie;
+import fr.silvharm.sysfortheque.common.model.pojo.library.Language;
 
 public class BookBean extends Book {
 	
 	protected Editor editor;
 	protected Collection collection;
 	protected Serie serie;
+	protected Language language;
 	protected FormatType formatType;
 	protected BookType bookType;
 	protected List<Genre> genreList;
-	private List<AuthorRoleBean> authorRoleBeanList;
+	protected List<AuthorRoleBean> authorRoleBeanList;
 	
 	
 	public BookBean() {
@@ -32,17 +34,19 @@ public class BookBean extends Book {
 	 * @param editor
 	 * @param collection
 	 * @param serie
+	 * @param language
 	 * @param formatType
 	 * @param bookType
 	 * @param genreList
 	 * @param authorRoleBeanList
 	 */
-	public BookBean(Book book, Editor editor, Collection collection, Serie serie, FormatType formatType,
-			BookType bookType, List<Genre> genreList, List<AuthorRoleBean> authorRoleBeanList) {
+	public BookBean(Book book, Editor editor, Collection collection, Serie serie, Language language,
+			FormatType formatType, BookType bookType, List<Genre> genreList, List<AuthorRoleBean> authorRoleBeanList) {
 		this.copyFromBook(book);
 		this.editor = editor;
 		this.collection = collection;
 		this.serie = serie;
+		this.language = language;
 		this.formatType = formatType;
 		this.bookType = bookType;
 		this.genreList = genreList;
@@ -58,6 +62,7 @@ public class BookBean extends Book {
 	 * @param serieId
 	 * @param serieNumber
 	 * @param releaseDate
+	 * @param languageId
 	 * @param formatTypeId
 	 * @param pageCount
 	 * @param bookTypeId
@@ -67,20 +72,23 @@ public class BookBean extends Book {
 	 * @param editor
 	 * @param collection
 	 * @param serie
+	 * @param language
 	 * @param formatType
 	 * @param bookType
 	 * @param genreList
 	 * @param authorRoleBeanList
 	 */
 	public BookBean(Integer id, String title, Integer editorId, Integer collectionId, Integer serieId,
-			Integer serieNumber, Date releaseDate, Integer formatTypeId, Integer pageCount, Integer bookTypeId,
-			String isbn, String description, String covertFileName, Editor editor, Collection collection, Serie serie,
-			FormatType formatType, BookType bookType, List<Genre> genreList, List<AuthorRoleBean> authorRoleBeanList) {
-		super(id, title, editorId, collectionId, serieId, serieNumber, releaseDate, formatTypeId, pageCount, bookTypeId,
-				isbn, description, covertFileName);
+			Integer serieNumber, Date releaseDate, Integer languageId, Integer formatTypeId, Integer pageCount,
+			Integer bookTypeId, String isbn, String description, String covertFileName, Editor editor,
+			Collection collection, Serie serie, Language language, FormatType formatType, BookType bookType,
+			List<Genre> genreList, List<AuthorRoleBean> authorRoleBeanList) {
+		super(id, title, editorId, collectionId, serieId, serieNumber, releaseDate, languageId, formatTypeId, pageCount,
+				bookTypeId, isbn, description, covertFileName);
 		this.editor = editor;
 		this.collection = collection;
 		this.serie = serie;
+		this.language = language;
 		this.formatType = formatType;
 		this.bookType = bookType;
 		this.genreList = genreList;
@@ -141,6 +149,23 @@ public class BookBean extends Book {
 	 */
 	public void setSerie(Serie serie) {
 		this.serie = serie;
+	}
+	
+	
+	/**
+	 * @return the language
+	 */
+	public Language getLanguage() {
+		return language;
+	}
+	
+	
+	/**
+	 * @param language
+	 *           the language to set
+	 */
+	public void setLanguage(Language language) {
+		this.language = language;
 	}
 	
 	
