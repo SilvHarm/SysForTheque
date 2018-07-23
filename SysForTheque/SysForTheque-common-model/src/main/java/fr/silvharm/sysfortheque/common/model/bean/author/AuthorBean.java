@@ -17,6 +17,16 @@ public class AuthorBean extends Author {
 	
 	
 	/**
+	 * @param author
+	 * @param nationalities
+	 */
+	public AuthorBean(Author author, List<Nationality> nationalities) {
+		this.copyFromAuthor(author);
+		this.nationalities = nationalities;
+	}
+	
+	
+	/**
 	 * @param pseudo
 	 * @param surname
 	 * @param firstName

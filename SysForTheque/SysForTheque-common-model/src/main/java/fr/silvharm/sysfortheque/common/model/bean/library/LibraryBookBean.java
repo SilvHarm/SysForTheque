@@ -16,6 +16,18 @@ public class LibraryBookBean extends LibraryBook {
 	
 	
 	/**
+	 * @param libraryBook
+	 * @param bookBean
+	 * @param language
+	 */
+	public LibraryBookBean(LibraryBook libraryBook, BookBean bookBean, Language language) {
+		this.copyFromLibraryBook(libraryBook);
+		this.bookBean = bookBean;
+		this.language = language;
+	}
+	
+	
+	/**
 	 * @param reference
 	 * @param bookId
 	 * @param languageId

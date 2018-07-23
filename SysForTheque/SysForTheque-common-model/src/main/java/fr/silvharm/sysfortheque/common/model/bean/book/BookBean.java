@@ -28,6 +28,29 @@ public class BookBean extends Book {
 	
 	
 	/**
+	 * @param book
+	 * @param editor
+	 * @param collection
+	 * @param serie
+	 * @param formatType
+	 * @param bookType
+	 * @param genreList
+	 * @param authorRoleBeanList
+	 */
+	public BookBean(Book book, Editor editor, Collection collection, Serie serie, FormatType formatType,
+			BookType bookType, List<Genre> genreList, List<AuthorRoleBean> authorRoleBeanList) {
+		this.copyFromBook(book);
+		this.editor = editor;
+		this.collection = collection;
+		this.serie = serie;
+		this.formatType = formatType;
+		this.bookType = bookType;
+		this.genreList = genreList;
+		this.authorRoleBeanList = authorRoleBeanList;
+	}
+	
+	
+	/**
 	 * @param title
 	 * @param editorId
 	 * @param collectionId

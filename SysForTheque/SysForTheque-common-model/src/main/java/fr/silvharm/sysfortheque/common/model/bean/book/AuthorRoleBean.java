@@ -16,6 +16,18 @@ public class AuthorRoleBean extends AuthorRole {
 	
 	
 	/**
+	 * @param authorRole
+	 * @param author
+	 * @param role
+	 */
+	public AuthorRoleBean(AuthorRole authorRole, Author author, Role role) {
+		this.copyFromAuthorRole(authorRole);
+		this.author = author;
+		this.role = role;
+	}
+	
+	
+	/**
 	 * @param bookId
 	 * @param authorId
 	 * @param roleId
