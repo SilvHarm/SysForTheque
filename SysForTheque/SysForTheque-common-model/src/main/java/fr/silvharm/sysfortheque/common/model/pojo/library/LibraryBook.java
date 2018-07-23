@@ -6,7 +6,6 @@ public class LibraryBook {
 	protected Integer id;
 	protected String reference;
 	protected int bookId;
-	protected int languageId;
 	
 	
 	public LibraryBook() {}
@@ -15,12 +14,10 @@ public class LibraryBook {
 	/**
 	 * @param reference
 	 * @param bookId
-	 * @param languageId
 	 */
-	public LibraryBook(String reference, int bookId, int languageId) {
+	public LibraryBook(String reference, int bookId) {
 		this.reference = reference;
 		this.bookId = bookId;
-		this.languageId = languageId;
 	}
 	
 	
@@ -28,13 +25,11 @@ public class LibraryBook {
 	 * @param id
 	 * @param reference
 	 * @param bookId
-	 * @param languageId
 	 */
-	public LibraryBook(Integer id, String reference, int bookId, int languageId) {
+	public LibraryBook(Integer id, String reference, int bookId) {
 		this.id = id;
 		this.reference = reference;
 		this.bookId = bookId;
-		this.languageId = languageId;
 	}
 	
 	
@@ -52,7 +47,6 @@ public class LibraryBook {
 		this.id = libraryBook.getId();
 		this.reference = libraryBook.getReference();
 		this.bookId = libraryBook.getBookId();
-		this.languageId = libraryBook.getLanguageId();
 	}
 	
 	
@@ -122,23 +116,6 @@ public class LibraryBook {
 	 */
 	public void setBookId(int bookId) {
 		this.bookId = bookId;
-	}
-	
-	
-	/**
-	 * @return the languageId
-	 */
-	public int getLanguageId() {
-		return languageId;
-	}
-	
-	
-	/**
-	 * @param languageId
-	 *           the languageId to set
-	 */
-	public void setLanguageId(int languageId) {
-		this.languageId = languageId;
 	}
 	
 }

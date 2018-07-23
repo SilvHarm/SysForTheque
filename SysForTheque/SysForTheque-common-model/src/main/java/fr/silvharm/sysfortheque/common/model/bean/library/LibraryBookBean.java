@@ -1,13 +1,11 @@
 package fr.silvharm.sysfortheque.common.model.bean.library;
 
 import fr.silvharm.sysfortheque.common.model.bean.book.BookBean;
-import fr.silvharm.sysfortheque.common.model.pojo.library.Language;
 import fr.silvharm.sysfortheque.common.model.pojo.library.LibraryBook;
 
 public class LibraryBookBean extends LibraryBook {
 	
 	protected BookBean bookBean;
-	protected Language language;
 	
 	
 	public LibraryBookBean() {
@@ -18,12 +16,10 @@ public class LibraryBookBean extends LibraryBook {
 	/**
 	 * @param libraryBook
 	 * @param bookBean
-	 * @param language
 	 */
-	public LibraryBookBean(LibraryBook libraryBook, BookBean bookBean, Language language) {
+	public LibraryBookBean(LibraryBook libraryBook, BookBean bookBean) {
 		this.copyFromLibraryBook(libraryBook);
 		this.bookBean = bookBean;
-		this.language = language;
 	}
 	
 	
@@ -31,15 +27,11 @@ public class LibraryBookBean extends LibraryBook {
 	 * @param id
 	 * @param reference
 	 * @param bookId
-	 * @param languageId
 	 * @param bookBean
-	 * @param language
 	 */
-	public LibraryBookBean(Integer id, String reference, int bookId, int languageId, BookBean bookBean,
-			Language language) {
-		super(id, reference, bookId, languageId);
+	public LibraryBookBean(Integer id, String reference, int bookId, int languageId, BookBean bookBean) {
+		super(id, reference, bookId);
 		this.bookBean = bookBean;
-		this.language = language;
 	}
 	
 	
@@ -61,23 +53,6 @@ public class LibraryBookBean extends LibraryBook {
 	 */
 	public void setBookBean(BookBean bookBean) {
 		this.bookBean = bookBean;
-	}
-	
-	
-	/**
-	 * @return the language
-	 */
-	public Language getLanguage() {
-		return language;
-	}
-	
-	
-	/**
-	 * @param language
-	 *           the language to set
-	 */
-	public void setLanguage(Language language) {
-		this.language = language;
 	}
 	
 }
