@@ -3,21 +3,31 @@ package fr.silvharm.sysfortheque.common.model.pojo.editor;
 
 public class Serie {
 	
-	private Integer id;
-	private String name;
-	private int editorId;
+	protected Integer id;
+	protected String name;
+	protected int editorId;
 	
 	
 	public Serie() {}
 	
 	
 	/**
-	 * Used when a new Serie need to be added to the database
-	 * 
 	 * @param name
 	 * @param editorId
 	 */
 	public Serie(String name, int editorId) {
+		this.name = name;
+		this.editorId = editorId;
+	}
+	
+	
+	/**
+	 * @param id
+	 * @param name
+	 * @param editorId
+	 */
+	public Serie(Integer id, String name, int editorId) {
+		this.id = id;
 		this.name = name;
 		this.editorId = editorId;
 	}

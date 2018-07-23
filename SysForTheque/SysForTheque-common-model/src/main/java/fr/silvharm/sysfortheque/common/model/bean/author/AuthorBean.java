@@ -3,20 +3,27 @@ package fr.silvharm.sysfortheque.common.model.bean.author;
 import java.util.Date;
 import java.util.List;
 
+import fr.silvharm.sysfortheque.common.model.pojo.author.Author;
 import fr.silvharm.sysfortheque.common.model.pojo.author.Nationality;
 
-public class AuthorBean {
+public class AuthorBean extends Author {
 	
-	private Integer id;
-	private String pseudo;
-	private String surname;
-	private String firstName;
-	private Date birthDate;
-	private Date deathDate;
-	private List<Nationality> nationalities;
+	protected List<Nationality> nationalities;
 	
 	
-	public AuthorBean() {}
+	public AuthorBean() {
+		super();
+	}
+	
+	
+	/**
+	 * @param author
+	 * @param nationalities
+	 */
+	public AuthorBean(Author author, List<Nationality> nationalities) {
+		this.copyFromAuthor(author);
+		this.nationalities = nationalities;
+	}
 	
 	
 	/**
@@ -30,12 +37,7 @@ public class AuthorBean {
 	 */
 	public AuthorBean(Integer id, String pseudo, String surname, String firstName, Date birthDate, Date deathDate,
 			List<Nationality> nationalities) {
-		this.id = id;
-		this.pseudo = pseudo;
-		this.surname = surname;
-		this.firstName = firstName;
-		this.birthDate = birthDate;
-		this.deathDate = deathDate;
+		super(id, pseudo, surname, firstName, birthDate, deathDate);
 		this.nationalities = nationalities;
 	}
 	
@@ -43,108 +45,6 @@ public class AuthorBean {
 	/********************************
 	 * Getters & Setters
 	 *******************************/
-	
-	/**
-	 * @return the id
-	 */
-	public Integer getId() {
-		return id;
-	}
-	
-	
-	/**
-	 * @param id
-	 *           the id to set
-	 */
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
-	
-	/**
-	 * @return the pseudo
-	 */
-	public String getPseudo() {
-		return pseudo;
-	}
-	
-	
-	/**
-	 * @param pseudo
-	 *           the pseudo to set
-	 */
-	public void setPseudo(String pseudo) {
-		this.pseudo = pseudo;
-	}
-	
-	
-	/**
-	 * @return the surname
-	 */
-	public String getSurname() {
-		return surname;
-	}
-	
-	
-	/**
-	 * @param surname
-	 *           the surname to set
-	 */
-	public void setSurname(String surname) {
-		this.surname = surname;
-	}
-	
-	
-	/**
-	 * @return the firstName
-	 */
-	public String getFirstName() {
-		return firstName;
-	}
-	
-	
-	/**
-	 * @param firstName
-	 *           the firstName to set
-	 */
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
-	
-	/**
-	 * @return the birthDate
-	 */
-	public Date getBirthDate() {
-		return birthDate;
-	}
-	
-	
-	/**
-	 * @param birthDate
-	 *           the birthDate to set
-	 */
-	public void setBirthDate(Date birthDate) {
-		this.birthDate = birthDate;
-	}
-	
-	
-	/**
-	 * @return the deathDate
-	 */
-	public Date getDeathDate() {
-		return deathDate;
-	}
-	
-	
-	/**
-	 * @param deathDate
-	 *           the deathDate to set
-	 */
-	public void setDeathDate(Date deathDate) {
-		this.deathDate = deathDate;
-	}
-	
 	
 	/**
 	 * @return the nationalities

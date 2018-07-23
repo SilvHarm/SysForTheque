@@ -4,39 +4,60 @@ import java.util.Date;
 
 public class UserBorrowedBook {
 	
-	private Integer id;
-	private int userId;
-	private int libraryBookId;
-	private Date beginning;
-	private Date end;
-	private boolean extended;
-	private boolean returned;
-	private Date dateReturned;
+	protected Integer id;
+	protected int userId;
+	protected int libraryBookId;
+	protected Date beginningDate;
+	protected Date endDate;
+	protected boolean extended;
+	protected boolean returned;
+	protected Date returnedDate;
 	
 	
 	public UserBorrowedBook() {}
 	
 	
 	/**
-	 * Used when a new UserBorrowedBook need to be added to the database
-	 * 
 	 * @param userId
 	 * @param libraryBookId
-	 * @param beginning
-	 * @param end
+	 * @param beginningDate
+	 * @param endDate
 	 * @param extended
 	 * @param returned
-	 * @param dateReturned
+	 * @param returnedDate
 	 */
-	public UserBorrowedBook(int userId, int libraryBookId, Date beginning, Date end, boolean extended, boolean returned,
-			Date dateReturned) {
+	public UserBorrowedBook(int userId, int libraryBookId, Date beginningDate, Date endDate, boolean extended,
+			boolean returned, Date returnedDate) {
 		this.userId = userId;
 		this.libraryBookId = libraryBookId;
-		this.beginning = beginning;
-		this.end = end;
+		this.beginningDate = beginningDate;
+		this.endDate = endDate;
 		this.extended = extended;
 		this.returned = returned;
-		this.dateReturned = dateReturned;
+		this.returnedDate = returnedDate;
+	}
+	
+	
+	/**
+	 * @param id
+	 * @param userId
+	 * @param libraryBookId
+	 * @param beginningDate
+	 * @param endDate
+	 * @param extended
+	 * @param returned
+	 * @param returnedDate
+	 */
+	public UserBorrowedBook(Integer id, int userId, int libraryBookId, Date beginningDate, Date endDate,
+			boolean extended, boolean returned, Date returnedDate) {
+		this.id = id;
+		this.userId = userId;
+		this.libraryBookId = libraryBookId;
+		this.beginningDate = beginningDate;
+		this.endDate = endDate;
+		this.extended = extended;
+		this.returned = returned;
+		this.returnedDate = returnedDate;
 	}
 	
 	
@@ -96,36 +117,36 @@ public class UserBorrowedBook {
 	
 	
 	/**
-	 * @return the beginning
+	 * @return the beginningDate
 	 */
-	public Date getBeginning() {
-		return beginning;
+	public Date getBeginningDate() {
+		return beginningDate;
 	}
 	
 	
 	/**
-	 * @param beginning
-	 *           the beginning to set
+	 * @param beginningDate
+	 *           the beginningDate to set
 	 */
-	public void setBeginning(Date beginning) {
-		this.beginning = beginning;
+	public void setBeginningDate(Date beginningDate) {
+		this.beginningDate = beginningDate;
 	}
 	
 	
 	/**
-	 * @return the end
+	 * @return the endDate
 	 */
-	public Date getEnd() {
-		return end;
+	public Date getEndDate() {
+		return endDate;
 	}
 	
 	
 	/**
-	 * @param end
-	 *           the end to set
+	 * @param endDate
+	 *           the endDate to set
 	 */
-	public void setEnd(Date end) {
-		this.end = end;
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 	
 	
@@ -164,19 +185,19 @@ public class UserBorrowedBook {
 	
 	
 	/**
-	 * @return the dateReturned
+	 * @return the returnedDate
 	 */
-	public Date getDateReturned() {
-		return dateReturned;
+	public Date getReturnedDate() {
+		return returnedDate;
 	}
 	
 	
 	/**
-	 * @param dateReturned
-	 *           the dateReturned to set
+	 * @param returnedDate
+	 *           the returnedDate to set
 	 */
-	public void setDateReturned(Date dateReturned) {
-		this.dateReturned = dateReturned;
+	public void setReturnedDate(Date returnedDate) {
+		this.returnedDate = returnedDate;
 	}
 	
 }

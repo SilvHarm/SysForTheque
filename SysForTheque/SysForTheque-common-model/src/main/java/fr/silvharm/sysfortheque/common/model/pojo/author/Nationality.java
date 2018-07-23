@@ -2,23 +2,35 @@ package fr.silvharm.sysfortheque.common.model.pojo.author;
 
 public class Nationality {
 	
-	private Integer id;
-	private String nationality;
-	private String country;
-	private String isoCode;
+	protected Integer id;
+	protected String nationality;
+	protected String country;
+	protected String isoCode;
 	
 	
 	public Nationality() {}
 	
 	
 	/**
-	 * Used when a new Nationality need to be added to the database
-	 * 
 	 * @param nationality
 	 * @param country
 	 * @param isoCode
 	 */
 	public Nationality(String nationality, String country, String isoCode) {
+		this.nationality = nationality;
+		this.country = country;
+		this.isoCode = isoCode;
+	}
+	
+	
+	/**
+	 * @param id
+	 * @param nationality
+	 * @param country
+	 * @param isoCode
+	 */
+	public Nationality(Integer id, String nationality, String country, String isoCode) {
+		this.id = id;
 		this.nationality = nationality;
 		this.country = country;
 		this.isoCode = isoCode;

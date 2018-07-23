@@ -3,110 +3,102 @@ package fr.silvharm.sysfortheque.common.model.bean.book;
 import java.util.Date;
 import java.util.List;
 
-import fr.silvharm.sysfortheque.common.model.bean.author.AuthorRoleBean;
+import fr.silvharm.sysfortheque.common.model.pojo.book.Book;
 import fr.silvharm.sysfortheque.common.model.pojo.book.BookType;
 import fr.silvharm.sysfortheque.common.model.pojo.book.FormatType;
 import fr.silvharm.sysfortheque.common.model.pojo.book.Genre;
 import fr.silvharm.sysfortheque.common.model.pojo.editor.Collection;
 import fr.silvharm.sysfortheque.common.model.pojo.editor.Editor;
 import fr.silvharm.sysfortheque.common.model.pojo.editor.Serie;
+import fr.silvharm.sysfortheque.common.model.pojo.library.Language;
 
-public class BookBean {
+public class BookBean extends Book {
 	
-	private Integer id;
-	private String title;
-	private Editor editor;
-	private Collection collection;
-	private Serie serie;
-	private Integer serieNumber;
-	private Date releaseDate;
-	private FormatType formatType;
-	private Integer pageCount;
-	private BookType bookType;
-	private String isbn;
-	private String description;
-	private String covertFileName;
-	private List<Genre> genreList;
-	private List<AuthorRoleBean> authorRoleList;
+	protected Editor editor;
+	protected Collection collection;
+	protected Serie serie;
+	protected Language language;
+	protected FormatType formatType;
+	protected BookType bookType;
+	protected List<Genre> genreList;
+	protected List<AuthorRoleBean> authorRoleBeanList;
 	
 	
-	public BookBean() {}
+	public BookBean() {
+		super();
+	}
+	
+	
+	/**
+	 * @param book
+	 * @param editor
+	 * @param collection
+	 * @param serie
+	 * @param language
+	 * @param formatType
+	 * @param bookType
+	 * @param genreList
+	 * @param authorRoleBeanList
+	 */
+	public BookBean(Book book, Editor editor, Collection collection, Serie serie, Language language,
+			FormatType formatType, BookType bookType, List<Genre> genreList, List<AuthorRoleBean> authorRoleBeanList) {
+		this.copyFromBook(book);
+		this.editor = editor;
+		this.collection = collection;
+		this.serie = serie;
+		this.language = language;
+		this.formatType = formatType;
+		this.bookType = bookType;
+		this.genreList = genreList;
+		this.authorRoleBeanList = authorRoleBeanList;
+	}
 	
 	
 	/**
 	 * @param id
 	 * @param title
-	 * @param editor
-	 * @param collection
-	 * @param serie
+	 * @param editorId
+	 * @param collectionId
+	 * @param serieId
 	 * @param serieNumber
 	 * @param releaseDate
-	 * @param formatType
+	 * @param languageId
+	 * @param formatTypeId
 	 * @param pageCount
-	 * @param bookType
+	 * @param bookTypeId
 	 * @param isbn
 	 * @param description
 	 * @param covertFileName
+	 * @param editor
+	 * @param collection
+	 * @param serie
+	 * @param language
+	 * @param formatType
+	 * @param bookType
 	 * @param genreList
-	 * @param authorRoleList
+	 * @param authorRoleBeanList
 	 */
-	public BookBean(Integer id, String title, Editor editor, Collection collection, Serie serie, Integer serieNumber,
-			Date releaseDate, FormatType formatType, Integer pageCount, BookType bookType, String isbn, String description,
-			String covertFileName, List<Genre> genreList, List<AuthorRoleBean> authorRoleList) {
-		this.id = id;
-		this.title = title;
+	public BookBean(Integer id, String title, Integer editorId, Integer collectionId, Integer serieId,
+			Integer serieNumber, Date releaseDate, Integer languageId, Integer formatTypeId, Integer pageCount,
+			Integer bookTypeId, String isbn, String description, String covertFileName, Editor editor,
+			Collection collection, Serie serie, Language language, FormatType formatType, BookType bookType,
+			List<Genre> genreList, List<AuthorRoleBean> authorRoleBeanList) {
+		super(id, title, editorId, collectionId, serieId, serieNumber, releaseDate, languageId, formatTypeId, pageCount,
+				bookTypeId, isbn, description, covertFileName);
 		this.editor = editor;
 		this.collection = collection;
 		this.serie = serie;
-		this.serieNumber = serieNumber;
-		this.releaseDate = releaseDate;
+		this.language = language;
 		this.formatType = formatType;
-		this.pageCount = pageCount;
 		this.bookType = bookType;
-		this.isbn = isbn;
-		this.description = description;
-		this.covertFileName = covertFileName;
 		this.genreList = genreList;
-		this.authorRoleList = authorRoleList;
+		this.authorRoleBeanList = authorRoleBeanList;
 	}
 	
 	
 	/********************************
 	 * Getters & Setters
 	 *******************************/
-	
-	/**
-	 * @return the id
-	 */
-	public Integer getId() {
-		return id;
-	}
-	
-	
-	/**
-	 * @param id
-	 *           the id to set
-	 */
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
-	
-	/**
-	 * @return the title
-	 */
-	public String getTitle() {
-		return title;
-	}
-	
-	
-	/**
-	 * @param title
-	 *           the title to set
-	 */
-	public void setTitle(String title) {
-		this.title = title;
-	}
 	
 	
 	/**
@@ -161,36 +153,19 @@ public class BookBean {
 	
 	
 	/**
-	 * @return the serieNumber
+	 * @return the language
 	 */
-	public Integer getSerieNumber() {
-		return serieNumber;
+	public Language getLanguage() {
+		return language;
 	}
 	
 	
 	/**
-	 * @param serieNumber
-	 *           the serieNumber to set
+	 * @param language
+	 *           the language to set
 	 */
-	public void setSerieNumber(Integer serieNumber) {
-		this.serieNumber = serieNumber;
-	}
-	
-	
-	/**
-	 * @return the releaseDate
-	 */
-	public Date getReleaseDate() {
-		return releaseDate;
-	}
-	
-	
-	/**
-	 * @param releaseDate
-	 *           the releaseDate to set
-	 */
-	public void setReleaseDate(Date releaseDate) {
-		this.releaseDate = releaseDate;
+	public void setLanguage(Language language) {
+		this.language = language;
 	}
 	
 	
@@ -212,23 +187,6 @@ public class BookBean {
 	
 	
 	/**
-	 * @return the pageCount
-	 */
-	public Integer getPageCount() {
-		return pageCount;
-	}
-	
-	
-	/**
-	 * @param pageCount
-	 *           the pageCount to set
-	 */
-	public void setPageCount(Integer pageCount) {
-		this.pageCount = pageCount;
-	}
-	
-	
-	/**
 	 * @return the bookType
 	 */
 	public BookType getBookType() {
@@ -242,57 +200,6 @@ public class BookBean {
 	 */
 	public void setBookType(BookType bookType) {
 		this.bookType = bookType;
-	}
-	
-	
-	/**
-	 * @return the isbn
-	 */
-	public String getIsbn() {
-		return isbn;
-	}
-	
-	
-	/**
-	 * @param isbn
-	 *           the isbn to set
-	 */
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
-	}
-	
-	
-	/**
-	 * @return the description
-	 */
-	public String getDescription() {
-		return description;
-	}
-	
-	
-	/**
-	 * @param description
-	 *           the description to set
-	 */
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	
-	
-	/**
-	 * @return the covertFileName
-	 */
-	public String getCovertFileName() {
-		return covertFileName;
-	}
-	
-	
-	/**
-	 * @param covertFileName
-	 *           the covertFileName to set
-	 */
-	public void setCovertFileName(String covertFileName) {
-		this.covertFileName = covertFileName;
 	}
 	
 	
@@ -314,19 +221,19 @@ public class BookBean {
 	
 	
 	/**
-	 * @return the authorRoleList
+	 * @return the authorRoleBeanList
 	 */
-	public List<AuthorRoleBean> getAuthorRoleList() {
-		return authorRoleList;
+	public List<AuthorRoleBean> getAuthorRoleBeanList() {
+		return authorRoleBeanList;
 	}
 	
 	
 	/**
-	 * @param authorRoleList
-	 *           the authorRoleList to set
+	 * @param authorRoleBeanList
+	 *           the authorRoleBeanList to set
 	 */
-	public void setAuthorRoleList(List<AuthorRoleBean> authorRoleList) {
-		this.authorRoleList = authorRoleList;
+	public void setAuthorRoleBeanList(List<AuthorRoleBean> authorRoleBeanList) {
+		this.authorRoleBeanList = authorRoleBeanList;
 	}
 	
 }

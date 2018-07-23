@@ -4,26 +4,23 @@ import java.util.Date;
 
 public class Author {
 	
-	private Integer id;
-	private String pseudo;
-	private String surname;
-	private String firstName;
-	private Date birthDate;
-	private Date deathDate;
+	protected Integer id;
+	protected String pseudo;
+	protected String surname;
+	protected String firstName;
+	protected Date birthDate;
+	protected Date deathDate;
 	
 	
 	public Author() {}
 	
 	
 	/**
-	 * Used when a new Author need to be added to the database
-	 * 
 	 * @param pseudo
 	 * @param surname
 	 * @param firstName
 	 * @param birthDate
 	 * @param deathDate
-	 * @param nationality
 	 */
 	public Author(String pseudo, String surname, String firstName, Date birthDate, Date deathDate) {
 		this.pseudo = pseudo;
@@ -31,6 +28,58 @@ public class Author {
 		this.firstName = firstName;
 		this.birthDate = birthDate;
 		this.deathDate = deathDate;
+	}
+	
+	
+	/**
+	 * @param id
+	 * @param pseudo
+	 * @param surname
+	 * @param firstName
+	 * @param birthDate
+	 * @param deathDate
+	 */
+	public Author(Integer id, String pseudo, String surname, String firstName, Date birthDate, Date deathDate) {
+		this.id = id;
+		this.pseudo = pseudo;
+		this.surname = surname;
+		this.firstName = firstName;
+		this.birthDate = birthDate;
+		this.deathDate = deathDate;
+	}
+	
+	
+	/********************************
+	 * Methods
+	 *******************************/
+	
+	/**
+	 * Copy the attributes from the Author (author) into the one calling the method
+	 * 
+	 * @param author
+	 *           the Author whom we want to copy the attributes
+	 */
+	public void copyFromAuthor(Author author) {
+		this.id = author.getId();
+		this.pseudo = author.getPseudo();
+		this.surname = author.getSurname();
+		this.firstName = author.getFirstName();
+		this.birthDate = author.getBirthDate();
+		this.deathDate = author.getDeathDate();
+	}
+	
+	
+	/**
+	 * Copy the attributes from the Author (author) into a new one
+	 * 
+	 * @param author
+	 *           the Author whom we want to copy the attributes
+	 * @return a new Author with the attributes of (author)
+	 */
+	public static Author copyIntoAuthor(Author author) {
+		Author toReturn = new Author();
+		toReturn.copyFromAuthor(author);
+		return toReturn;
 	}
 	
 	

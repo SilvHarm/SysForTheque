@@ -3,19 +3,27 @@ package fr.silvharm.sysfortheque.common.model.pojo.book;
 
 public class Genre {
 	
-	private Integer id;
-	private String genre;
+	protected Integer id;
+	protected String genre;
 	
 	
 	public Genre() {}
 	
 	
 	/**
-	 * Used when a new Genre need to be added to the database
-	 * 
 	 * @param genre
 	 */
 	public Genre(String genre) {
+		this.genre = genre;
+	}
+	
+	
+	/**
+	 * @param id
+	 * @param genre
+	 */
+	public Genre(Integer id, String genre) {
+		this.id = id;
 		this.genre = genre;
 	}
 	

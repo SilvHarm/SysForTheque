@@ -3,21 +3,31 @@ package fr.silvharm.sysfortheque.common.model.pojo.library;
 
 public class Language {
 	
-	private Integer id;
-	private String language;
-	private String code;
+	protected Integer id;
+	protected String language;
+	protected String code;
 	
 	
 	public Language() {}
 	
 	
 	/**
-	 * Used when a new Language need to be added to the database
-	 * 
 	 * @param language
 	 * @param code
 	 */
 	public Language(String language, String code) {
+		this.language = language;
+		this.code = code;
+	}
+	
+	
+	/**
+	 * @param id
+	 * @param language
+	 * @param code
+	 */
+	public Language(Integer id, String language, String code) {
+		this.id = id;
 		this.language = language;
 		this.code = code;
 	}

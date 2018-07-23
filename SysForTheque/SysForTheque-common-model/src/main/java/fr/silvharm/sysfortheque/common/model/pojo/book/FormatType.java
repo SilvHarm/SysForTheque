@@ -3,19 +3,27 @@ package fr.silvharm.sysfortheque.common.model.pojo.book;
 
 public class FormatType {
 	
-	private Integer id;
-	private String format;
+	protected Integer id;
+	protected String format;
 	
 	
 	public FormatType() {}
 	
 	
 	/**
-	 * Used when a new FormatType need to be added to the database
-	 * 
 	 * @param format
 	 */
 	public FormatType(String format) {
+		this.format = format;
+	}
+	
+	
+	/**
+	 * @param id
+	 * @param format
+	 */
+	public FormatType(Integer id, String format) {
+		this.id = id;
 		this.format = format;
 	}
 	

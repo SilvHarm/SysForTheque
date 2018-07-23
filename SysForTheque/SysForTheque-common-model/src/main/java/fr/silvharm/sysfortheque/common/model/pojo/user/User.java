@@ -3,23 +3,35 @@ package fr.silvharm.sysfortheque.common.model.pojo.user;
 
 public class User {
 	
-	private Integer id;
-	private String username;
-	private String password;
-	private String emailAddress;
+	protected Integer id;
+	protected String username;
+	protected String password;
+	protected String emailAddress;
 	
 	
 	public User() {}
 	
 	
 	/**
-	 * Used when a new User need to be added to the database
-	 * 
 	 * @param username
 	 * @param password
 	 * @param emailAddress
 	 */
 	public User(String username, String password, String emailAddress) {
+		this.username = username;
+		this.password = password;
+		this.emailAddress = emailAddress;
+	}
+	
+	
+	/**
+	 * @param id
+	 * @param username
+	 * @param password
+	 * @param emailAddress
+	 */
+	public User(Integer id, String username, String password, String emailAddress) {
+		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.emailAddress = emailAddress;
