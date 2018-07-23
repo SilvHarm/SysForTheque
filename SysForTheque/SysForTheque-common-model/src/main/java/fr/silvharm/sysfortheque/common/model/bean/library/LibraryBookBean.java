@@ -2,28 +2,29 @@ package fr.silvharm.sysfortheque.common.model.bean.library;
 
 import fr.silvharm.sysfortheque.common.model.bean.book.BookBean;
 import fr.silvharm.sysfortheque.common.model.pojo.library.Language;
+import fr.silvharm.sysfortheque.common.model.pojo.library.LibraryBook;
 
-public class LibraryBookBean {
+public class LibraryBookBean extends LibraryBook {
 	
-	private Integer id;
-	private String reference;
-	private BookBean book;
-	private Language language;
+	protected BookBean bookBean;
+	protected Language language;
 	
 	
-	public LibraryBookBean() {}
+	public LibraryBookBean() {
+		super();
+	}
 	
 	
 	/**
-	 * @param id
 	 * @param reference
-	 * @param book
+	 * @param bookId
+	 * @param languageId
+	 * @param bookBean
 	 * @param language
 	 */
-	public LibraryBookBean(Integer id, String reference, BookBean book, Language language) {
-		this.id = id;
-		this.reference = reference;
-		this.book = book;
+	public LibraryBookBean(String reference, int bookId, int languageId, BookBean bookBean, Language language) {
+		super(reference, bookId, languageId);
+		this.bookBean = bookBean;
 		this.language = language;
 	}
 	
@@ -33,53 +34,19 @@ public class LibraryBookBean {
 	 *******************************/
 	
 	/**
-	 * @return the id
-	 */
-	public Integer getId() {
-		return id;
-	}
-	
-	
-	/**
-	 * @param id
-	 *           the id to set
-	 */
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
-	
-	/**
-	 * @return the reference
-	 */
-	public String getReference() {
-		return reference;
-	}
-	
-	
-	/**
-	 * @param reference
-	 *           the reference to set
-	 */
-	public void setReference(String reference) {
-		this.reference = reference;
-	}
-	
-	
-	/**
-	 * @return the book
+	 * @return the bookBean
 	 */
 	public BookBean getBook() {
-		return book;
+		return bookBean;
 	}
 	
 	
 	/**
-	 * @param book
-	 *           the book to set
+	 * @param bookBean
+	 *           the bookBean to set
 	 */
-	public void setBook(BookBean book) {
-		this.book = book;
+	public void setBookBean(BookBean bookBean) {
+		this.bookBean = bookBean;
 	}
 	
 	
