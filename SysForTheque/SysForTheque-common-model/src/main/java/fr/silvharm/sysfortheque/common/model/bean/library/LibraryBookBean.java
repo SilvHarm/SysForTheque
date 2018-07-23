@@ -28,14 +28,16 @@ public class LibraryBookBean extends LibraryBook {
 	
 	
 	/**
+	 * @param id
 	 * @param reference
 	 * @param bookId
 	 * @param languageId
 	 * @param bookBean
 	 * @param language
 	 */
-	public LibraryBookBean(String reference, int bookId, int languageId, BookBean bookBean, Language language) {
-		super(reference, bookId, languageId);
+	public LibraryBookBean(Integer id, String reference, int bookId, int languageId, BookBean bookBean,
+			Language language) {
+		super(id, reference, bookId, languageId);
 		this.bookBean = bookBean;
 		this.language = language;
 	}

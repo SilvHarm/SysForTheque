@@ -51,6 +51,7 @@ public class BookBean extends Book {
 	
 	
 	/**
+	 * @param id
 	 * @param title
 	 * @param editorId
 	 * @param collectionId
@@ -71,12 +72,12 @@ public class BookBean extends Book {
 	 * @param genreList
 	 * @param authorRoleBeanList
 	 */
-	public BookBean(String title, Integer editorId, Integer collectionId, Integer serieId, Integer serieNumber,
-			Date releaseDate, Integer formatTypeId, Integer pageCount, Integer bookTypeId, String isbn, String description,
-			String covertFileName, Editor editor, Collection collection, Serie serie, FormatType formatType,
-			BookType bookType, List<Genre> genreList, List<AuthorRoleBean> authorRoleBeanList) {
-		super(title, editorId, collectionId, serieId, serieNumber, releaseDate, formatTypeId, pageCount, bookTypeId, isbn,
-				description, covertFileName);
+	public BookBean(Integer id, String title, Integer editorId, Integer collectionId, Integer serieId,
+			Integer serieNumber, Date releaseDate, Integer formatTypeId, Integer pageCount, Integer bookTypeId,
+			String isbn, String description, String covertFileName, Editor editor, Collection collection, Serie serie,
+			FormatType formatType, BookType bookType, List<Genre> genreList, List<AuthorRoleBean> authorRoleBeanList) {
+		super(id, title, editorId, collectionId, serieId, serieNumber, releaseDate, formatTypeId, pageCount, bookTypeId,
+				isbn, description, covertFileName);
 		this.editor = editor;
 		this.collection = collection;
 		this.serie = serie;

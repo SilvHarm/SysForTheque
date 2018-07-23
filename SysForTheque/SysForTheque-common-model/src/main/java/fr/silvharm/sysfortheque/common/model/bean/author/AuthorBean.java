@@ -27,6 +27,7 @@ public class AuthorBean extends Author {
 	
 	
 	/**
+	 * @param id
 	 * @param pseudo
 	 * @param surname
 	 * @param firstName
@@ -34,9 +35,9 @@ public class AuthorBean extends Author {
 	 * @param deathDate
 	 * @param nationalities
 	 */
-	public AuthorBean(String pseudo, String surname, String firstName, Date birthDate, Date deathDate,
+	public AuthorBean(Integer id, String pseudo, String surname, String firstName, Date birthDate, Date deathDate,
 			List<Nationality> nationalities) {
-		super(pseudo, surname, firstName, birthDate, deathDate);
+		super(id, pseudo, surname, firstName, birthDate, deathDate);
 		this.nationalities = nationalities;
 	}
 	
