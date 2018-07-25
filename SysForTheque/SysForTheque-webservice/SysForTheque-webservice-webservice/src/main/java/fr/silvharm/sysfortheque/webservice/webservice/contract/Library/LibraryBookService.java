@@ -1,7 +1,6 @@
 package fr.silvharm.sysfortheque.webservice.webservice.contract.Library;
 
 import java.util.List;
-import java.util.Map;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -13,15 +12,6 @@ import fr.silvharm.sysfortheque.common.model.pojo.book.Genre;
 
 @WebService(serviceName = "LibraryBook")
 public interface LibraryBookService {
-	
-	/**
-	 * Get the id of all the Book available and how many of them are remaining
-	 * 
-	 * @return a Map of type <bookId, availableBookCount> or null
-	 */
-	@WebMethod
-	Map<Integer, Integer> getAvailableBooksMap();
-	
 	
 	/**
 	 * Get all the BookBean whom the id where contained in (bookIdList)
