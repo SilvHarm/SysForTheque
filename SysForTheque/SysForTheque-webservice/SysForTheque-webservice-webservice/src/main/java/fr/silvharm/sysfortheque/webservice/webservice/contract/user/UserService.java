@@ -11,7 +11,7 @@ import fr.silvharm.sysfortheque.common.model.technical.pojo.RequestResult;
 public interface UserService {
 	
 	/**
-	 * Obtain the email-address of all the User whom the id where in the (userIdList)
+	 * Get the email-address of all the User whom the id where in the (userIdList)
 	 * 
 	 * @param userIdList
 	 *           a List containing the id of all the User whom the email-address is requested

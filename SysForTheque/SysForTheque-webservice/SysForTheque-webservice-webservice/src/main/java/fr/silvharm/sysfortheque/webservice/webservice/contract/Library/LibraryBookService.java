@@ -7,6 +7,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 import fr.silvharm.sysfortheque.common.model.bean.book.BookBean;
+import fr.silvharm.sysfortheque.common.model.bean.library.LibraryBookBean;
 import fr.silvharm.sysfortheque.common.model.pojo.book.Book;
 import fr.silvharm.sysfortheque.common.model.pojo.book.Genre;
 
@@ -14,7 +15,7 @@ import fr.silvharm.sysfortheque.common.model.pojo.book.Genre;
 public interface LibraryBookService {
 	
 	/**
-	 * Obtain the id of all the Book available and how many of them are remaining
+	 * Get the id of all the Book available and how many of them are remaining
 	 * 
 	 * @return a Map of type <bookId, availableBookCount> or null
 	 */
@@ -23,7 +24,7 @@ public interface LibraryBookService {
 	
 	
 	/**
-	 * Obtain all the BookBean whom the id where contained in (bookIdList)
+	 * Get all the BookBean whom the id where contained in (bookIdList)
 	 * 
 	 * @param bookIdList
 	 *           a List containing all the id of the BookBean requested
@@ -34,7 +35,7 @@ public interface LibraryBookService {
 	
 	
 	/**
-	 * Obtain all the Book who possess all the Genre contained in (bookGenresList)
+	 * Get all the Book who possess all the Genre contained in (bookGenresList)
 	 * 
 	 * @param bookGenresList
 	 *           a List containing all the Genre that the Book returned shall have
@@ -45,7 +46,7 @@ public interface LibraryBookService {
 	
 	
 	/**
-	 * Obtain all the Book whom the title match (title)
+	 * Get all the Book whom the title match (title)
 	 * 
 	 * @param title
 	 *           a part of the title of the Book sought-after
@@ -53,4 +54,16 @@ public interface LibraryBookService {
 	 */
 	@WebMethod
 	List<Book> getBookListByTitle(String title);
+	
+	
+	/**
+	 * Get all the LibraryBookBean whom the id where contained in (bookIdList)
+	 * 
+	 * @param bookIdList
+	 *           a List containing all the id of the LibraryBookBean requested
+	 * @return a List containing all the LibraryBookBean requested or null
+	 */
+	@WebMethod
+	List<LibraryBookBean> getLibraryBookBeanListByIdList(List<Integer> bookIdList);
+	
 }

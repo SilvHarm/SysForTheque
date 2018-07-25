@@ -52,7 +52,7 @@ public interface LibraryBookBorrowingService {
 	
 	
 	/**
-	 * Obtain all the ongoing UserBorrowedBook of the User (userId)
+	 * Get all the ongoing UserBorrowedBook of the User (userId)
 	 * 
 	 * @param userId
 	 *           the id of User whom we wish to know the ongoing borrowing
@@ -63,7 +63,7 @@ public interface LibraryBookBorrowingService {
 	
 	
 	/**
-	 * Obtain all the UserBorrowedBook who are ongoing
+	 * Get all the UserBorrowedBook who are ongoing
 	 * 
 	 * @return a List containing all the ongoing UserBorrowedBook or null
 	 */
@@ -72,7 +72,7 @@ public interface LibraryBookBorrowingService {
 	
 	
 	/**
-	 * Obtain all the UserBorrowedBook who were extended
+	 * Get all the UserBorrowedBook who were extended
 	 * 
 	 * @return a List containing all the extended UserBorrowedBook or null
 	 */
@@ -81,7 +81,7 @@ public interface LibraryBookBorrowingService {
 	
 	
 	/**
-	 * Obtain all the UserBorrowedBook who were not returned in time and so are still considered ongoing
+	 * Get all the UserBorrowedBook who were not returned in time and so are still considered ongoing
 	 * 
 	 * @return a List containing all the not returned UserBorrowedBook or null
 	 */
