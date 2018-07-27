@@ -6,6 +6,7 @@ import fr.silvharm.sysfortheque.common.model.pojo.library.LibraryBook;
 public class LibraryBookBean extends LibraryBook {
 	
 	protected BookBean bookBean;
+	protected int availableCount;
 	
 	
 	public LibraryBookBean() {
@@ -16,10 +17,12 @@ public class LibraryBookBean extends LibraryBook {
 	/**
 	 * @param libraryBook
 	 * @param bookBean
+	 * @param availableCount
 	 */
-	public LibraryBookBean(LibraryBook libraryBook, BookBean bookBean) {
+	public LibraryBookBean(LibraryBook libraryBook, BookBean bookBean, int availableCount) {
 		this.copyFromLibraryBook(libraryBook);
 		this.bookBean = bookBean;
+		this.availableCount = availableCount;
 	}
 	
 	
@@ -28,10 +31,13 @@ public class LibraryBookBean extends LibraryBook {
 	 * @param reference
 	 * @param bookId
 	 * @param bookBean
+	 * @param availableCount
 	 */
-	public LibraryBookBean(Integer id, String reference, int bookId, int languageId, BookBean bookBean) {
+	public LibraryBookBean(Integer id, String reference, int bookId, int languageId, BookBean bookBean,
+			int availableCount) {
 		super(id, reference, bookId);
 		this.bookBean = bookBean;
+		this.availableCount = availableCount;
 	}
 	
 	
@@ -42,7 +48,7 @@ public class LibraryBookBean extends LibraryBook {
 	/**
 	 * @return the bookBean
 	 */
-	public BookBean getBook() {
+	public BookBean getBookBean() {
 		return bookBean;
 	}
 	
@@ -53,6 +59,23 @@ public class LibraryBookBean extends LibraryBook {
 	 */
 	public void setBookBean(BookBean bookBean) {
 		this.bookBean = bookBean;
+	}
+	
+	
+	/**
+	 * @return the availableCount
+	 */
+	public int getAvailableCount() {
+		return availableCount;
+	}
+	
+	
+	/**
+	 * @param availableCount
+	 *           the availableCount to set
+	 */
+	public void setAvailableCount(int availableCount) {
+		this.availableCount = availableCount;
 	}
 	
 }
